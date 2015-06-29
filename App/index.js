@@ -26,7 +26,7 @@ for( var i = 0; i < 200; i++ ) {
 }
 
 var p = [0,0, 0,0, 0,0, 0,0];
-var animate = function() {
+function animate() {
 	// Clear the screen - note that .globalAlpha is still honored,
 	// so this will only "darken" the sceen a bit
 	ctx.globalCompositeOperation = 'source-over';
@@ -53,7 +53,9 @@ var animate = function() {
 		ctx.strokeStyle = curve.color;
 		ctx.stroke();
 	}
-};
+}
+
+ejecta.include('phaser.js');
 
 
 // The vertical touch position controls the number of curves;
